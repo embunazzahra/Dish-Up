@@ -295,6 +295,22 @@ async function getUserByUserId(user) {
   }
 }
 
+async function searchRecipeByBookmark(user) {
+  let result = await getBookmark(user);
+  let searchTitleWith = "";
+  if (result.message == "success") {
+    result.data.forEach((element) => {
+      searchTitleWith += element.recipe_name + " ";
+    });
+    searchTitleWith = searchTitleWith.trim().split(/\s+/).join(":* | ") + ":*";
+    const query = `SELECT recipes.recipe_name, recipes.recipe_id, count(saved_recipes.recipe_id) FROM recipes left join saved_recipes ON recipes.recipe_id = saved_recipes.recipe_id WHERE to_tsvector(recipe_name) @@ to_tsquery('${searchTitleWith}') AND  recipes.recipe_id NOT IN (SELECT recipe_id FROM saved_recipes WHERE user_id = ${user.user_id}) GROUP BY recipes.recipe_name, recipes.recipe_id ORDER BY count(saved_recipes.recipe_id) DESC`;
+    let finalResult = await db.query(query);
+    console.log(finalResult);
+  } else {
+    return result;
+  }
+}
+
 module.exports = {
   login,
   register,
@@ -309,4 +325,5 @@ module.exports = {
   deleteBookmark,
   checkBookmark,
   getUserByUserId,
+  searchRecipeByBookmark,
 };

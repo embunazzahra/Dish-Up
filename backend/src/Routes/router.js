@@ -107,4 +107,6 @@ router.post(
  */
 router.post("/getUserByUserId", [validateUserId], controllers.getUserByUserId);
 
+router.post("/searchRecipeByBookmark", controllers.searchRecipeByBookmark);
+
 module.exports = router;

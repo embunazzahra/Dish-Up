@@ -217,6 +217,19 @@ async function getUserByUserId(req, res) {
   }
 }
 
+async function searchRecipeByBookmark(req, res) {
+  try {
+    const result = await services.searchRecipeByBookmark(req.body);
+    res.json(result);
+  } catch (err) {
+    if (err.detail != null) {
+      res.status(400).json({ message: err.detail });
+    } else {
+      res.status(400).json(err);
+    }
+  }
+}
+
 module.exports = {
   login,
   register,
@@ -231,4 +244,5 @@ module.exports = {
   deleteBookmark,
   checkBookmark,
   getUserByUserId,
+  searchRecipeByBookmark,
 };
