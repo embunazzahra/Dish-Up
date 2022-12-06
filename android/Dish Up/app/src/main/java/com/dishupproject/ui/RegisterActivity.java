@@ -28,8 +28,13 @@ import retrofit2.Response;
 /**
  * This is class for register activity.
  *
- * @author Dhau' Embun Azzahra
+ * @author tim 6
  */
+
+/**
+ * dfajfjka
+ */
+
 public class RegisterActivity extends AppCompatActivity {
     private RetrofitServices retrofitServices;
     /**
