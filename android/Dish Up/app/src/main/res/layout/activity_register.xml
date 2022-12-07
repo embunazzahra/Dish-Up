@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.RegisterActivity">
 
+<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,16 +24,26 @@
 
     </LinearLayout>
 
+=======
+>>>>>>> amanda
     <EditText
         android:id="@+id/etRegisterUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
+<<<<<<< HEAD
         android:layout_marginTop="300dp"
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="32dp"
         android:ems="10"
         android:hint="Username"
+=======
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="your username"
+>>>>>>> amanda
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/etRegisterEmail"
@@ -47,6 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="102dp"
+<<<<<<< HEAD
         android:layout_marginTop="353dp"
         android:layout_marginEnd="99dp"
         android:ems="10"
@@ -55,6 +67,16 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+=======
+        android:layout_marginTop="232dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="your email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+>>>>>>> amanda
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,10 +85,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="103dp"
+<<<<<<< HEAD
         android:layout_marginTop="9dp"
         android:layout_marginEnd="99dp"
         android:ems="10"
         android:hint="Password"
+=======
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="99dp"
+        android:ems="10"
+        android:hint="your password"
+>>>>>>> amanda
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,10 +121,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="142dp"
+<<<<<<< HEAD
         android:layout_marginTop="20dp"
         android:layout_marginEnd="136dp"
         android:text="Already have account?"
         android:textColor="@color/red"
+=======
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="142dp"
+        android:text="already have account?"
+        android:textColor="@color/light_orange"
+>>>>>>> amanda
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,11 +141,19 @@
         android:id="@+id/btnToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:text="Login"
         android:textAllCaps="false"
         android:textColor="@color/red"
+=======
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/yellow"
+>>>>>>> amanda
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

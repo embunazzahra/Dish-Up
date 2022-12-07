@@ -7,8 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="light_orange">#FFCC7C</color>
-    <color name="yellow">#FFFEB326</color>
+    <color name="light_orange">#D23E3E</color >
+    <color name="yellow">#C21111</color>
     <color name="pink">#FFFA9A94</color>
     <color name="red">#C21111</color>
+<<<<<<< HEAD
+=======
+    <color name ="grey">#33E3DEFF</color>
+>>>>>>> amanda
 </resources>

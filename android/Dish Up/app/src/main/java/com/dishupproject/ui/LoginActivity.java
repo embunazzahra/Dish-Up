@@ -1,9 +1,8 @@
 package com.dishupproject.ui;
 
 import com.dishupproject.R;
-import com.dishupproject.data.RetrofitInstance;
-import com.dishupproject.data.model.GetRecipesResponse;
-import com.dishupproject.model.GetUserResponse;
+import com.dishupproject.data.RetrofitInstance;;
+import com.dishupproject.data.model.GetUserResponse;
 import com.dishupproject.data.model.User;
 import com.dishupproject.data.services.RetrofitServices;
 import com.google.gson.Gson;
