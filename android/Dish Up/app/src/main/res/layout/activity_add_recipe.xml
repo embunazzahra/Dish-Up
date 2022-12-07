@@ -36,7 +36,7 @@
                 <ImageView
                     android:layout_width="350dp"
                     android:layout_height="80dp"
-                    android:background="@drawable/BANNER"/>
+                    android:background="@drawable/banner"/>
             </LinearLayout>
 
             <!-- TODO: Recipe Name Edit Text-->

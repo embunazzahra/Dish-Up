@@ -10,17 +10,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF">
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/etLoginEmail"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="130dp"
-            android:scaleType="center"
             android:layout_marginTop="40dp"
+            android:background="@drawable/header"
+            android:scaleType="center"
             android:text=""
             android:textColor="@color/white"
-            android:textSize="30sp"
-            android:background="@drawable/header"/>
+            android:textSize="30sp" />
 
     </LinearLayout>
 
