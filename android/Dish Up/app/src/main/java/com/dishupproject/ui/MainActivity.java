@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -43,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2 pager2;
     FragmentAdapter adapter;
     ListView recipeList;
+    TextView usernameProfile,userrecipecount;
     private static List<Recipe> recipesss;
-    public static Recipe selectedRecipe = null;
+    public Recipe selectedRecipe = RecipeFragment.selectedRecipe;
     private RetrofitServices retrofitServices;
     private static ArrayAdapter<Recipe> recipeLVAdapter;
 
@@ -54,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        usernameProfile = findViewById(R.id.usersname);
+        usernameProfile.setText(LoginActivity.getLoggedAccount().getUsername());
+        userrecipecount = findViewById(R.id.userrecipecount);
         retrofitServices = RetrofitInstance.getInstance().create(RetrofitServices.class);
 
         tabLayout = findViewById(R.id.tab_layout);
@@ -95,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
         recipeList = (ListView) findViewById(R.id.lvRecipes);
 
-        Call<GetRecipesResponse> call = retrofitServices.recipes();
+        Call<GetRecipesResponse> call = retrofitServices.findRecomendation(LoginActivity.getLoggedAccount());
         call.enqueue(new Callback<GetRecipesResponse>() {
             @Override
             public void onResponse(Call<GetRecipesResponse> call, Response<GetRecipesResponse> response) {
@@ -128,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         recipeList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                selectedRecipe = (Recipe) adapterView.getItemAtPosition(i);
+                RecipeFragment.selectedRecipe = (Recipe) adapterView.getItemAtPosition(i);
                 Intent intent = new Intent(MainActivity.this,RecipeDetailActivity.class);
                 startActivity(intent);
             }

@@ -44,6 +44,7 @@ public class RecipeDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        System.out.println(recipe);
         setContentView(R.layout.activity_recipe_detail);
         tvRecipeName = findViewById(R.id.tvRecipeName);
         tvrecipeWriter = findViewById(R.id.tvrecipeWriter);
