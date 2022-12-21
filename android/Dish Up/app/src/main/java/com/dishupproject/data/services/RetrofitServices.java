@@ -61,4 +61,7 @@ public interface RetrofitServices {
     @POST("/getUserByUserId")
     Call<GetUserResponse> getUserByUserId(@Body User user);
 
+    @POST("/searchRecipeByBookmark")
+    Call<GetRecipesResponse> findRecomendation(@Body User user);
+
 }
